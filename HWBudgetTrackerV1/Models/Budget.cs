@@ -9,6 +9,7 @@ namespace HWBudgetTrackerV1.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
         public int HouseholdId { get; set; }
 
         public virtual Household Household { get; set; }
