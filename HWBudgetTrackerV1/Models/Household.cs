@@ -12,7 +12,7 @@ namespace HWBudgetTrackerV1.Models
             this.Users = new HashSet<ApplicationUser>();
             this.Budgets = new HashSet<Budget>();
             this.Categories = new HashSet<Category>();
-            this.Accounts = new HashSet<Account>();
+            this.FinancialAccounts = new HashSet<FinancialAccounts>();
         }
 
         public int Id { get; set; }
@@ -26,6 +26,6 @@ namespace HWBudgetTrackerV1.Models
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<Budget> Budgets { get; set; }
         public virtual ICollection<ApplicationUser> Users { get; set; }
-        public virtual ICollection<Account> Accounts { get; set; }
+        public virtual ICollection<FinancialAccounts> FinancialAccounts { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace HWBudgetTrackerV1.Models
         public int CategoryId { get; set; }
         public string EnteredById { get; set; }
         
-        public virtual Account Account { get; set; }
+        public virtual FinancialAccounts FinancialAccounts { get; set; }
         public virtual Category Category { get; set; }
         public virtual ApplicationUser EnteredBy { get; set; }
 

@@ -5,9 +5,9 @@ using System.Web;
 
 namespace HWBudgetTrackerV1.Models
 {
-    public class Account
+    public class FinancialAccounts
     {
-        public Account()
+        public FinancialAccounts()
         {
             this.Transactions = new HashSet<Transaction>();
         }
@@ -21,5 +21,7 @@ namespace HWBudgetTrackerV1.Models
 
         public virtual ICollection<Transaction> Transactions { get; set; }
         public virtual Household Household { get; set; }
+
+
     }
 }

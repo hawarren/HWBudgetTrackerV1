@@ -61,7 +61,7 @@ namespace HWBudgetTrackerV1.Migrations
 
                 //adding all roles to dummyPM except Admin
                 var userIdt1 = userManager.FindByEmail("testuser1@btracker.com").Id;
-                userManager.AddToRole(userIdt1, "Submitter");
+                //userManager.AddToRole(userIdt1, "Submitter");
 
 
 
@@ -78,7 +78,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt2 = userManager.FindByEmail("testuser2@btracker.com").Id;
-                userManager.AddToRole(userIdt2, "Submitter");
+                //userManager.AddToRole(userIdt2, "Submitter");
 
                 if (!context.Users.Any(u => u.Email == "testuser3@btracker.com"))
                 {
@@ -93,7 +93,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt3 = userManager.FindByEmail("testuser3@btracker.com").Id;
-                userManager.AddToRole(userIdt3, "Submitter");
+                //userManager.AddToRole(userIdt3, "Submitter");
 
                 if (!context.Users.Any(u => u.Email == "testuser4@btracker.com"))
                 {
@@ -108,7 +108,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt4 = userManager.FindByEmail("testuser4@btracker.com").Id;
-                userManager.AddToRole(userIdt4, "Submitter");
+                //userManager.AddToRole(userIdt4, "Submitter");
 
                 if (!context.Users.Any(u => u.Email == "testuser5@btracker.com"))
                 {
@@ -123,7 +123,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt5 = userManager.FindByEmail("testuser5@btracker.com").Id;
-                userManager.AddToRole(userIdt5, "Submitter");
+               // userManager.AddToRole(userIdt5, "Submitter");
 
                 if (!context.Users.Any(u => u.Email == "testuser6@btracker.com"))
                 {
@@ -138,7 +138,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt6 = userManager.FindByEmail("testuser6@btracker.com").Id;
-                userManager.AddToRole(userIdt6, "Submitter");
+                //userManager.AddToRole(userIdt6, "Submitter");
 
             }
 

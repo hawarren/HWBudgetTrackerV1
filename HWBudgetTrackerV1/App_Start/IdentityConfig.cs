@@ -11,15 +11,29 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using HWBudgetTrackerV1.Models;
+using System.Web.Helpers;
+using SendGrid;
+using System.Web.Configuration;
+using SendGrid.Helpers.Mail;
 
 namespace HWBudgetTrackerV1
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
             // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            dynamic sg = new SendGridAPIClient(
+                WebConfigurationManager.AppSettings["SendGridAPIKey"]);
+            
+            Email from = new Email(WebConfigurationManager.AppSettings["ContactEmail"]);
+            Email to = new Email(message.Destination);
+            Content content = new Content("text/plain", message.Body);
+
+            SendGrid.Helpers.Mail.Mail mail = new SendGrid.Helpers.Mail.Mail(from, message.Subject, to, content);
+
+            //// return Task.FromResult(0);
+            dynamic response = await sg.client.mail.send.post(requestBody: mail.Get());
         }
     }
 

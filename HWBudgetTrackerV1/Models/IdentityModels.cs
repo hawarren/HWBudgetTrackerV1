@@ -45,7 +45,7 @@ namespace HWBudgetTrackerV1.Models
 
         public DbSet<Budget> Budgets { get; set; }
         public DbSet<BudgetItem> BudgetItems { get; set; }
-        public DbSet<Account> Accounts { get; set; }
+        public DbSet<FinancialAccounts> FinancialAccounts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Household> Households { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
