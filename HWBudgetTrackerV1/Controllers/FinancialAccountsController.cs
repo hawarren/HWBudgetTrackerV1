@@ -38,10 +38,13 @@ namespace HWBudgetTrackerV1.Controllers
         }
 
         // GET: FinancialAccounts/Create
-        public ActionResult Create()
+        public ActionResult Create(int HouseholdId)
         {
-            ViewBag.HouseholdId = new SelectList(db.Households, "Id", "Name");
-            return View();
+            FinancialAccounts financialAccount = new FinancialAccounts();
+            financialAccount.HouseholdId = HouseholdId;
+
+            //ViewBag.HouseholdId = new SelectList(db.Households, "Id", "Name");
+            return View(financialAccount);
         }
 
         // POST: FinancialAccounts/Create
