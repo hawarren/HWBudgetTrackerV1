@@ -36,6 +36,23 @@ namespace HWBudgetTrackerV1.Controllers
             {
                 return HttpNotFound();
             }
+            List<Transaction> AddUp = db.FinancialAccounts.SelectMany(t => t.Transactions).ToList();
+            var AddAccounts = db.Transactions.Where(m => m.FinancialAccounts.Id == id).ToList();
+            var runningTotal = 0;
+
+            foreach (var usr in AddAccounts)
+            {
+                runningTotal += usr.Amount;
+                //UsersViewModel vm = new UsersViewModel();
+                //vm.User = usr;
+                //vm.Roles = helper.ListUserRoles(usr.Id).ToList();
+                //users.Add(vm);
+                
+            }
+            financialAccounts.Balance = runningTotal;
+            db.Entry(financialAccounts).State = EntityState.Modified;
+            db.SaveChanges();
+
             return View(financialAccounts);
         }
 

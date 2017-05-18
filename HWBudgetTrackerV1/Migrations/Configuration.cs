@@ -143,8 +143,32 @@ namespace HWBudgetTrackerV1.Migrations
             }
 
 
+            if (!context.Categories.Any(u => u.Name == "Food"))
+            {
+                context.Categories.Add(new Category { Name = "Food" });               
+            }
 
+            if (!context.Categories.Any(u => u.Name == "Bills"))
+            {
+                context.Categories.Add(new Category { Name = "Bills" });
+            }
 
+            if (!context.Categories.Any(u => u.Name == "Paycheck"))
+            {
+                context.Categories.Add(new Category { Name = "Paycheck" });
+            }
+            if (!context.Categories.Any(u => u.Name == "Medical"))
+            {
+                context.Categories.Add(new Category { Name = "Medical" });
+            }
+            if (!context.Categories.Any(u => u.Name == "OneTimePurchase"))
+            {
+                context.Categories.Add(new Category { Name = "OneTimePurchase" });
+            }
+            if (!context.Categories.Any(u => u.Name == "Bonus"))
+            {
+                context.Categories.Add(new Category { Name = "Bonus" });
+            }
 
         }
     }

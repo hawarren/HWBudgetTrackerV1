@@ -11,8 +11,9 @@ Category
 Transaction
 
 
-***Budgets are like tickettypes
-
+***Budgets are like tickettypes, but each household makes up their own budget categories
+Budgets are adhoc, any item can be put into a budget adhoc. whether the budget and category are the same is coincidence.
+preseed categories
 bugtracker models
 Project
 Ticket
@@ -26,10 +27,11 @@ TicketStatus
 TicketType
 
 
-
-
-
-
+***********
+paid templates at
+envatomarket.com
+themeforest
+**********8
 
 *********************
 Project
@@ -51,13 +53,14 @@ Requirements
 □ View accounts for household
 
 □ Transaction Management
-□ Create, edit, delete or void transactions
+□ Create, edit, delete DONE
+or void transactions
 □ Update account balances per transaction
 □ Categorize transactions by budget category
 □ Update budget status (if necessary) per transaction
 
 □ Household Management *
-□ Create household *
+□ Create household * DONE
 □ Invite users to join household *
 □ Join household *
 □ Leave household *
