@@ -1,0 +1,26 @@
+﻿Relation to bug tracker
+
+Household...(users on project/household)
+FinancialAccounts Project 
+
+Budget... ticket types   (food budget is like "feature request")
+budgetItem  ...Ticket(household has budgets)
+...TicketComments(budgetItems are entries on budget)
+...TicketHistory? (each entry is the history of that account)
+Category
+Transaction
+
+
+***Budgets are like tickettypes
+
+bugtracker models
+Project
+Ticket
+
+TicketAttachment
+TicketComment
+TicketHistory
+TicketNotification
+TicketPriority
+TicketStatus
+TicketType

@@ -249,6 +249,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HWNotes.txt" />
     <Content Include="Notes\cf_budget_erd.png" />
     <Content Include="Notes\SRS - Financial Portal - 083116.pdf" />
     <Content Include="private.config" />

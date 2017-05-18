@@ -10,6 +10,7 @@ using HWBudgetTrackerV1.Models;
 
 namespace HWBudgetTrackerV1.Controllers
 {
+    [Authorize]
     public class HouseholdsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
