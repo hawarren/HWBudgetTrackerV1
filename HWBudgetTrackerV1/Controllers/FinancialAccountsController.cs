@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HWBudgetTrackerV1.Models;
+using Microsoft.AspNet.Identity;
 
 namespace HWBudgetTrackerV1.Controllers
 {
@@ -16,9 +17,10 @@ namespace HWBudgetTrackerV1.Controllers
 
         // GET: FinancialAccounts
         [Authorize]
-        public ActionResult Index()
+        public ActionResult Index(int? householdId)
         {
-            var financialAccounts = db.FinancialAccounts.Include(f => f.Household);
+            //var thisuser = db.Users.Find(User.Identity.GetUserId());
+            var financialAccounts = db.FinancialAccounts.Where(h => h.HouseholdId == householdId).Include(f => f.Household);
             return View(financialAccounts.ToList());
         }
 

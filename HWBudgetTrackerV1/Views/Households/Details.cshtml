@@ -106,15 +106,15 @@
                   
                   
 
-                    @*<td>
-                        <div> @Html.ActionLink("Details", "Details", "Tickets", new { id = item.Id }, null)|</div>
+                   <td>
+                        <div> @Html.ActionLink("Account Details", "Details", "FinancialAccounts", new { id = item.Id }, null)|</div>
                                 <div>
-                                    @Html.ActionLink("Edit Ticket ", "Edit", "Tickets", new { id = item.Id }, null) |
+                                    @Html.ActionLink("Edit Account ", "Edit", "FinancialAccounts", new { id = item.Id }, null) |
                                 </div>
                                 <div>
-                                    @Html.ActionLink("Delete Ticket", "Delete", "Tickets", new { id = item.Id }, null)
+                                    @Html.ActionLink("Delete Account", "Delete", "FinancialAccounts", new { id = item.Id }, null)
                                 </div>
-                    </td>*@
+                    </td>
                 </tr>
                             }
 

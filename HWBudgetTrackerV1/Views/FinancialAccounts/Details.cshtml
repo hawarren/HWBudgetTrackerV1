@@ -1,13 +1,13 @@
 ﻿@model HWBudgetTrackerV1.Models.FinancialAccounts
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Financial Account Details";
 }
 
 <h2>Details</h2>
 
 <div>
-    <h4>FinancialAccounts</h4>
+    <h4>FinancialAccounts and Transactions</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -42,17 +42,125 @@
             @Html.DisplayFor(model => model.ReconciledBalance)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.TransactionId)
-        </dt>
+        </dt>*@
 
-        <dd>
+        @*<dd>
             @Html.DisplayFor(model => model.TransactionId)
-        </dd>
+        </dd>*@
 
     </dl>
 </div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Reconciled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().ReconciledAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().AccountId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().EnteredById)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().Amount)
+            </th>
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Transactions.Count() == 0)
+            {
+            <tr>
+                <td>
+                    No Transactions yet, feel free to add some.
+                </td>
+            </tr>
+        }
+        @foreach (var item in Model.Transactions)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reconciled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReconciledAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AccountId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnteredBy.DisplayName)
+                </td>
+
+
+
+
+                <td>
+                    <div> @Html.ActionLink("Transaction Details", "Details", "Transactions", new { id = item.Id }, null)|</div>
+                    <div>
+                        @Html.ActionLink("Edit Transaction ", "Edit", "Transactions", new { id = item.Id }, null) |
+                    </div>
+                    <div>
+                        @Html.ActionLink("Delete Transaction", "Delete", "Transactions", new { id = item.Id }, null)
+                    </div>
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Add a Transaction", "Create", "Transactions", new { AccountId = Model.Id }, null) I
+
 </p>

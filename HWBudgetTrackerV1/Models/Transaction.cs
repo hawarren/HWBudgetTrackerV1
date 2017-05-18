@@ -9,7 +9,7 @@ namespace HWBudgetTrackerV1.Models
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public int Date { get; set; }
+        public DateTimeOffset Date { get; set; }
         public int Amount { get; set; }
         public string Type { get; set; }
 

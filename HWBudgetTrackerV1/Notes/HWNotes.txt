@@ -24,3 +24,44 @@ TicketNotification
 TicketPriority
 TicketStatus
 TicketType
+
+
+
+
+
+
+
+*********************
+Project
+Household Budgeter
+Requirements
+□ Database design DONE
+□ Code-first migrations DONE
+
+□ User Management 
+□ Register new user DONE
+□ Login DONE
+□ Change password DONE
+□ Recover lost password (Sendgrid) PROBLEM
+□ Edit user profile information DONE
+
+□ Account Management 
+□ Create, edit, delete bank accounts DONE
+□ Update account balance (warn user of account overdraft)
+□ View accounts for household
+
+□ Transaction Management
+□ Create, edit, delete or void transactions
+□ Update account balances per transaction
+□ Categorize transactions by budget category
+□ Update budget status (if necessary) per transaction
+
+□ Household Management *
+□ Create household *
+□ Invite users to join household *
+□ Join household *
+□ Leave household *
+□ View users in household *
+
+Deliverable Date
+Monday, December 5, 2016

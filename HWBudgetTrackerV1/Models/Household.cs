@@ -17,6 +17,7 @@ namespace HWBudgetTrackerV1.Models
         }
 
         public int Id { get; set; }
+        [Display(Name = "Household Name")]
         public string Name { get; set; }
         //this is the Head of Household ID, not a primary key
 

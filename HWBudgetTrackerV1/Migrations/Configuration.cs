@@ -123,7 +123,7 @@ namespace HWBudgetTrackerV1.Migrations
                     }, "Abc&123!");
                 }
                 var userIdt5 = userManager.FindByEmail("testuser5@btracker.com").Id;
-               // userManager.AddToRole(userIdt5, "Submitter");
+                // userManager.AddToRole(userIdt5, "Submitter");
 
                 if (!context.Users.Any(u => u.Email == "testuser6@btracker.com"))
                 {
