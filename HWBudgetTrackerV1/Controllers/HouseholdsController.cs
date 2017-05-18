@@ -54,7 +54,7 @@ namespace HWBudgetTrackerV1.Controllers
             if (ModelState.IsValid)
             {
                 household.HHID = User.Identity.GetUserId();
-                household.UserId = User.Identity.GetUserId();
+                household.Users.Add(db.Users.Find(household.HHID));
                 db.Households.Add(household);
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +19,8 @@ namespace HWBudgetTrackerV1.Models
         public int Id { get; set; }
         public string Name { get; set; }
         //this is the Head of Household ID, not a primary key
+
+        [Display(Name = "HeadOfHousehold")]
         public string HHID { get; set; }
 
 

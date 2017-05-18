@@ -35,11 +35,18 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.UserId)
+            @*@Html.DisplayNameFor(model => model.UserId)*@
+            Household Members
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UserId)
+            @foreach (var users in Model.Users)
+           {
+            <p>@users.DisplayName </p>
+            }
+
+
         </dd>
 
         <dt>
