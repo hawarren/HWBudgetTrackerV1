@@ -17,7 +17,10 @@ namespace HWBudgetTrackerV1.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
-        
+        //this is the Head of Household ID, not a primary key
+        public string HHID { get; set; }
+
+
         public int CategoryId { get; set; }
         public int BudgetId { get; set; }
         public string UserId { get; set; }

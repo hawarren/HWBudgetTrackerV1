@@ -15,6 +15,7 @@ namespace HWBudgetTrackerV1.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: FinancialAccounts
+        [Authorize]
         public ActionResult Index()
         {
             var financialAccounts = db.FinancialAccounts.Include(f => f.Household);

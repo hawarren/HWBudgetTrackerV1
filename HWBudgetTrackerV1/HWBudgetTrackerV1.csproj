@@ -234,6 +234,7 @@
     <Compile Include="Models\BudgetItem.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Household.cs" />
+    <Compile Include="Models\HouseholdHHViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Transaction.cs" />
@@ -249,7 +250,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HWNotes.txt" />
+    <Content Include="Notes\HWNotes.txt" />
     <Content Include="Notes\cf_budget_erd.png" />
     <Content Include="Notes\SRS - Financial Portal - 083116.pdf" />
     <Content Include="private.config" />

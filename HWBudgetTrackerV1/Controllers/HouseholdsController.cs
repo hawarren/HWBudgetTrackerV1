@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HWBudgetTrackerV1.Models;
+using BugTrackerV3.helpers;
+using Microsoft.AspNet.Identity;
 
 namespace HWBudgetTrackerV1.Controllers
 {
@@ -51,6 +53,8 @@ namespace HWBudgetTrackerV1.Controllers
         {
             if (ModelState.IsValid)
             {
+                household.HHID = User.Identity.GetUserId();
+                household.UserId = User.Identity.GetUserId();
                 db.Households.Add(household);
                 db.SaveChanges();
                 return RedirectToAction("Index");
