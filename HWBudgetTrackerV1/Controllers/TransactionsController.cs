@@ -55,7 +55,9 @@ namespace HWBudgetTrackerV1.Controllers
             {
                 db.Transactions.Add(transaction);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+               // return RedirectToAction("Index");
+                return RedirectToAction("Details", "FinancialAccounts", new { Id = transaction.FinancialAccountsId });
+
             }
 
             ViewBag.CategoryId = new SelectList(db.Categories, "Id", "Name", transaction.CategoryId);
