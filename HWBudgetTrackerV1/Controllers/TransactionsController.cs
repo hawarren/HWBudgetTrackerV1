@@ -49,7 +49,7 @@ namespace HWBudgetTrackerV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Description,Date,Amount,Type,Reconciled,ReconciledAmount,AccountId,CategoryId,EnteredById")] Transaction transaction)
+        public ActionResult Create([Bind(Include = "Id,Description,Date,Amount,Type,Reconciled,ReconciledAmount,FinancialAccountsId,CategoryId,EnteredById")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {

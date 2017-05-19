@@ -36,8 +36,9 @@ namespace HWBudgetTrackerV1.Controllers
             {
                 return HttpNotFound();
             }
+            //update account balance by summing all transactions for that account
             List<Transaction> AddUp = db.FinancialAccounts.SelectMany(t => t.Transactions).ToList();
-            var AddAccounts = db.Transactions.Where(m => m.FinancialAccounts.Id == id).ToList();
+            var AddAccounts = db.Transactions.Where(m => m.FinancialAccountsId == id).ToList();
             var runningTotal = 0;
 
             foreach (var usr in AddAccounts)
@@ -50,6 +51,7 @@ namespace HWBudgetTrackerV1.Controllers
                 
             }
             financialAccounts.Balance = runningTotal;
+
             db.Entry(financialAccounts).State = EntityState.Modified;
             db.SaveChanges();
 
@@ -77,7 +79,9 @@ namespace HWBudgetTrackerV1.Controllers
             {
                 db.FinancialAccounts.Add(financialAccounts);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Households", new { id = financialAccounts.HouseholdId });
+               // return RedirectToAction("Index");
+
             }
 
             ViewBag.HouseholdId = new SelectList(db.Households, "Id", "Name", financialAccounts.HouseholdId);

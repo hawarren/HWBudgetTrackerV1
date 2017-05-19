@@ -1,0 +1,25 @@
+﻿
+
+<connectionStrings>
+
+  <add name="DefaultConnection"
+
+connectionString="Data Source=coderfoundry.cloudapp.net,55555;
+
+          Initial Catalog=hwarren-budgeter;
+
+          User Id=hwarren;
+
+          Password=Asim7681;
+
+          Integrated Security=False"
+
+       providerName="System.Data.SqlClient"
+
+         />
+
+</connectionStrings>
+<!--<appSettings>
+    <add key="SendGridAPIkey" value="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" />
+    <add key="ContactEmail" value="Hanif.Warren@gmail.com"/>
+  </appSettings>-->

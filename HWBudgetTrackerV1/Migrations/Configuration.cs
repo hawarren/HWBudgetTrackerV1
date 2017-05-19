@@ -145,7 +145,7 @@ namespace HWBudgetTrackerV1.Migrations
 
             if (!context.Categories.Any(u => u.Name == "Food"))
             {
-                context.Categories.Add(new Category { Name = "Food" });               
+                context.Categories.Add(new Category { Name = "Food" });
             }
 
             if (!context.Categories.Any(u => u.Name == "Bills"))

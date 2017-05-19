@@ -75,7 +75,7 @@
                 @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().ReconciledAmount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().AccountId)
+                @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().FinancialAccountsId)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Transactions.FirstOrDefault().CategoryId)
@@ -96,7 +96,10 @@
             {
             <tr>
                 <td>
+                </td>
+                <td>
                     No Transactions yet, feel free to add some.
+                    @Model.Transactions.Count()
                 </td>
             </tr>
         }
@@ -104,7 +107,7 @@
             {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Id)
+                    @Html.DisplayFor(modelItem => item.FinancialAccountsId)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Id)
@@ -128,7 +131,7 @@
                     @Html.DisplayFor(modelItem => item.ReconciledAmount)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.AccountId)
+                    @Html.DisplayFor(modelItem => item.FinancialAccountsId)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.CategoryId)
@@ -161,6 +164,6 @@
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
-    @Html.ActionLink("Add a Transaction", "Create", "Transactions", new { AccountId = Model.Id }, null) I
+    @Html.ActionLink("Add a Transaction", "Create", "Transactions", new { FinancialAccountsId = Model.Id }, null) I
 
 </p>

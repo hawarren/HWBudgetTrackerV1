@@ -16,7 +16,7 @@ namespace HWBudgetTrackerV1.Models
         public int Reconciled { get; set; }
         public int ReconciledAmount { get; set; }
 
-        public int AccountId { get; set; }
+        public int FinancialAccountsId { get; set; }
         public int CategoryId { get; set; }
         public string EnteredById { get; set; }
         

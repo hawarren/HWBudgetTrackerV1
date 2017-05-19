@@ -253,7 +253,8 @@
     <Content Include="Notes\HWNotes.txt" />
     <Content Include="Notes\cf_budget_erd.png" />
     <Content Include="Notes\SRS - Financial Portal - 083116.pdf" />
-    <Content Include="private.config" />
+    <None Include="Private.config" />
+    <None Include="private.config.bak" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
